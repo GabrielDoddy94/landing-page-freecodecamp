@@ -1,0 +1,280 @@
+:root {
+  --bg-gray-primary: #eeeeee;
+  --bg-gray-secondary: #dddddd;
+  --bg-yellow-tertiary: #f1c40f;
+  --bg-orange-quaternary: #ff8c00;
+
+  --fs-standard: 62.5%;
+  --ff-primary: 'Lato', sans-serif;
+}
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: var(--fs-standard);
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: var(--ff-primary);
+  line-height: 1.5em;
+  background: var(--bg-gray-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  background: var(--bg-yellow-tertiary);
+  font-size: 1.7rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  min-width: 8vw;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.page-wrapper {
+  position: relative;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-gray-primary);
+  min-height: 7rem;
+  max-width: 130rem;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-img {
+  max-width: 30rem;
+  width: 100%;
+  height: 100%;
+}
+
+#nav-bar ul {
+  width: 36vw;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.section-form {
+  margin: 6rem 0 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-form h2 {
+  margin: 2rem;
+}
+
+#form {
+  width: 28rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#email {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  margin-bottom: 1.4rem;
+}
+
+#submit {
+  font-weight: 900;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 100rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box-features {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon_box-features {
+  height: 12.5rem;
+  width: 20vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_box-features i {
+  font-size: 5.5rem;
+  color: var(--bg-orange-quaternary);
+}
+
+.info_box-features {
+  width: 80vw;
+  height: 12.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-video {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.section-video iframe {
+  max-width: 56rem;
+  width: 100%;
+}
+
+.section-prices {
+  padding: 0 1rem;
+  margin-top: 8rem;
+
+  display: flex;
+}
+
+.box-product {
+  padding-bottom: 1rem;
+  border: 1px solid #000;
+  border-radius: 0.3rem;
+  text-align: center;
+
+  flex: 1;
+}
+
+.box-product:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.box-product ul {
+  line-height: 2;
+  margin: 2rem 0 3rem;
+}
+
+.box-product .btn {
+  font-weight: 400;
+}
+
+.level {
+  background: var(--bg-gray-secondary);
+  height: 4.5rem;
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level h3 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.footer {
+  background: var(--bg-gray-secondary);
+  padding: 1.8rem 2.5rem;
+  margin-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer ul li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.footer p {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 658px) {
+  #header {
+    padding-top: 2rem;
+    flex-direction: column;
+  }
+
+  #nav-bar ul {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-form {
+    margin-top: 15rem;
+  }
+
+  .box-features {
+    margin-bottom: 4rem;
+  }
+
+  .icon_box-features {
+    display: none;
+  }
+
+  .info_box-features {
+    text-align: center;
+  }
+
+  .section-prices {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-product:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .box-product {
+    max-width: 30rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
